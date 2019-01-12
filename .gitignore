@@ -1,0 +1,5 @@
+.*.o
+.*.d
+rad_tests
+rad_tests.opt
+rad_tests.debug

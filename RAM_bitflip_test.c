@@ -3,7 +3,7 @@
 #include <sys/mman.h>
 
 
-int main()
+void RAM_bitflip_test()
 {
     pid_t id = getpid();
     printf("mmap eg starting, my pid is %d\n", (int) id);
@@ -43,5 +43,4 @@ int main()
     }
 
     printf("++++\nRAM_bitflip_test\n%d", bits_flipped);
-    return 0;
 }
