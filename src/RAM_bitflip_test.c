@@ -48,7 +48,7 @@ int main()
 
     }
 
-    printf("++++\nRAM_bitflip_test\ntotal flips: %d\nzero->one flips", bits_flipped, zeroToOneFlips);
+    printf("++++\nRAM_bitflip_test\ntotal flips: %d\nzero->one flips: %d", bits_flipped, zeroToOneFlips);
 
     return 0;
 }
