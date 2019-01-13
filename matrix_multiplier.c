@@ -65,7 +65,7 @@ void matrix_multiply_integer(int num)
 void matrix_multiply_floating(float num)
 {
     int i, j, k;
-    int a[10][10], b[10][10], result[10][10];
+    float a[10][10], b[10][10], result[10][10];
 
     /* rows and column for first matrix */
     int r1 = 10;
@@ -85,7 +85,7 @@ void matrix_multiply_floating(float num)
     // Storing elements of second matrix.
     for (i = 0; i < r2; ++i)
         for (j = 0; j < c2; ++j)
-            b[i][j] = (i + j) / num;
+            b[i][j] = (i + j) / (num + 1);
 
     // Initializing all elements of result matrix to 0
     for (i = 0; i < r1; ++i)
@@ -104,7 +104,7 @@ void matrix_multiply_floating(float num)
     for (i = 0; i < r1; ++i) {
         printf("{ ");
         for (j = 0; j < c2; ++j) {
-            printf("%d", result[i][j]);
+            printf("%f", result[i][j]);
 
             if (j != c2 - 1) {
                 printf(",");
@@ -123,12 +123,14 @@ void matrix_multiply_floating(float num)
 
 void matrix_multiplier_integer(int n)
 {
-    for (int i = 0; i < n; ++i)
-        matrix_multiply_integer();
+    for (int i = 0; i < n; ++i) {
+        matrix_multiply_integer(i);
+    }
 }
 
 void matrix_multiplier_floating(int n)
 {
-    for (int i = 0; i < n; ++i)
+    for (int i = 0; i < n; ++i) {
         matrix_multiply_floating(i);
+    }
 }
