@@ -2,6 +2,7 @@
 
 #include "matrix_multiplier.h"
 #include "RAM_bitflip_test.h"
+#include "flash_write_test.h"
 
 int main()
 {
@@ -11,4 +12,6 @@ int main()
     matrix_multiplier_floating(10);
 
     RAM_bitflip_test();
+
+    flash_write_test();
 }

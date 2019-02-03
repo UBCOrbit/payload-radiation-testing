@@ -16,12 +16,13 @@ void RAM_bitflip_test()
     }
 
     /* zzzzzzz */
-    usleep(1000);
+    /* 10 milliseconds */
+    usleep(100000);
     /* beep beep beep beep */
     /* .... urgh, *HITS SNOOZE* */
-    usleep(100);
+    // usleep(100);
     /* beep bepp beep b-*CLNK**/
-    usleep(25);
+    // usleep(25);
     /* *gets up* */
 
     /* count the number of bit flips caused by radiation. */
