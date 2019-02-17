@@ -1,24 +1,14 @@
-#include "flash_write_test.h"
+#include "flash_read_test.h"
 
 #include <stdio.h>
 
 #define FILE_SIZE 1024*1024
 
-void flash_write_test()
+void flash_read_test()
 {
-    printf("flash_write_test\n");
+    printf("flash_read_test\n");
 
-    FILE *fp;
-    fp = fopen("write.file", "w");
-
-    // write pattern to file
-    for (int i = 0; i < FILE_SIZE; i++) {
-        fputc(i % 256, fp);
-    }
-
-    fclose(fp);
-
-    fp = fopen("write.file", "r");
+    FILE *fp = fopen("read.file", "r");
 
     // read in pattern and test for changes
     int flips = 0;

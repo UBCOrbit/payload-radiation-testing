@@ -40,26 +40,16 @@ void matrix_multiply_integer(int num)
             for (k = 0; k < c1; ++k)
                 result[i][j] += a[i][k] * b[k][j];
 
+    int vals[10] = {0};
+    for (i = 0; i < r1; ++i)
+        for (j = 0; j < c2; ++j)
+            vals[i] += result[i][j];
+
     // Displaying the result
-    printf("{");
-    for (i = 0; i < r1; ++i) {
-        printf("{ ");
-        for (j = 0; j < c2; ++j) {
-            printf("%d", result[i][j]);
-
-            if (j != c2 - 1) {
-                printf(",");
-            }
-
-            printf(" ");
-        }
-
-        if (i == r1 - 1) {
-            printf("}}\n");
-        } else {
-            printf("}, ");
-        }
-    }
+    printf("%d");
+    for (i = 1; i < r1; ++i)
+        printf(", %d", vals[i]);
+    printf("\n");
 }
 
 void matrix_multiply_floating(float num)
@@ -99,30 +89,21 @@ void matrix_multiply_floating(float num)
             for (k = 0; k < c1; ++k)
                 result[i][j] += a[i][k] * b[k][j];
 
+    float vals[10] = {0};
+    for (i = 0; i < r1; ++i)
+        for (j = 0; j < c2; ++j)
+            vals[i] += result[i][j];
+
     // Displaying the result
-    printf("{");
-    for (i = 0; i < r1; ++i) {
-        printf("{ ");
-        for (j = 0; j < c2; ++j) {
-            printf("%f", result[i][j]);
-
-            if (j != c2 - 1) {
-                printf(",");
-            }
-
-            printf(" ");
-        }
-
-        if (i == r1 - 1) {
-            printf("}}\n");
-        } else {
-            printf("}, ");
-        }
-    }
+    printf("%f");
+    for (i = 1; i < r1; ++i)
+        printf(", %f", vals[i]);
+    printf("\n");
 }
 
 void matrix_multiplier_integer(int n)
 {
+    printf("matrix multiplier integer\n");
     for (int i = 0; i < n; ++i) {
         matrix_multiply_integer(i);
     }
@@ -130,6 +111,7 @@ void matrix_multiplier_integer(int n)
 
 void matrix_multiplier_floating(int n)
 {
+    printf("matrix multiplier floating\n");
     for (int i = 0; i < n; ++i) {
         matrix_multiply_floating(i);
     }
