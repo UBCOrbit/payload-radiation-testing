@@ -6,7 +6,7 @@
 
 void RAM_bitflip_test()
 {
-    printf("RAM bitflip test\n");
+    printf("[RAD][BFT]RAM bitflip test[/RAD][/BFT]\n");
 
     // TODO: map 40 non contiguous pages?
     /* get 10 pages of continuous memory (in RAM) */
@@ -41,5 +41,5 @@ void RAM_bitflip_test()
         }
     }
 
-    printf("total flips, %d\nzero to one flips, %d\n", flips, zeroToOneFlips);
+    printf("[RAD][BFT]total flips, %d zero to one flips, %d[/RAD][/BFT]\n", flips, zeroToOneFlips);
 }

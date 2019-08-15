@@ -6,7 +6,7 @@
 
 void flash_write_test()
 {
-    printf("flash_write_test\n");
+    printf("[RAD][FWT]flash_write_test[/RAD][/FWT]\n");
 
     FILE *fp;
     fp = fopen("write.file", "w");
@@ -48,5 +48,5 @@ void flash_write_test()
 
     fclose(fp);
 
-    printf("total flips, %d\nzero to one flips, %d\nfile size, %ld\n", flips, zeroToOneFlips, size);
+    printf("[RAD][FWT]total flips, %d zero to one flips, %d file size, %ld[/RAD][/FWT]\n", flips, zeroToOneFlips, size);
 }

@@ -46,9 +46,11 @@ void matrix_multiply_integer(int num)
             vals[i] += result[i][j];
 
     // Displaying the result
+    printf("[RAD][MMI]");
     printf("%d");
     for (i = 1; i < r1; ++i)
         printf(", %d", vals[i]);
+    printf("[/RAD][/MMI]");
     printf("\n");
 }
 
@@ -95,15 +97,17 @@ void matrix_multiply_floating(float num)
             vals[i] += result[i][j];
 
     // Displaying the result
+    printf("[RAD][MMI]");
     printf("%f");
     for (i = 1; i < r1; ++i)
         printf(", %f", vals[i]);
+    printf("[/RAD][/MMI]");
     printf("\n");
 }
 
 void matrix_multiplier_integer(int n)
 {
-    printf("matrix multiplier integer\n");
+    printf("[RAD][MMI]matrix multiplier integer[/RAD][/MMI]\n");
     for (int i = 0; i < n; ++i) {
         matrix_multiply_integer(i);
     }
@@ -111,7 +115,7 @@ void matrix_multiplier_integer(int n)
 
 void matrix_multiplier_floating(int n)
 {
-    printf("matrix multiplier floating\n");
+    printf("[RAD][MMI]matrix multiplier floating[/RAD][/MMI]\n");
     for (int i = 0; i < n; ++i) {
         matrix_multiply_floating(i);
     }

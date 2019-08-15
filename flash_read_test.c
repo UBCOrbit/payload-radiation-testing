@@ -6,7 +6,7 @@
 
 void flash_read_test()
 {
-    printf("flash_read_test\n");
+    printf("[RAD][FRT]flash_read_test[/RAD][/FRT]\n");
 
     FILE *fp = fopen("read.file", "r");
 
@@ -38,5 +38,5 @@ void flash_read_test()
 
     fclose(fp);
 
-    printf("total flips, %d\nzero to one flips, %d\nfile size, %ld\n", flips, zeroToOneFlips, size);
+    printf("[RAD][FRT]total flips, %d zero to one flips, %d file size, %ld[/RAD][/FRT]\n", flips, zeroToOneFlips, size);
 }
